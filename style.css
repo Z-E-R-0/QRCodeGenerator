@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f9a825, #f06292);
+    background: linear-gradient(135deg, #141E30, #243B55);
     color: #fff;
     text-align: center;
     padding: 50px;
@@ -9,21 +13,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent dark background */
     padding: 20px;
     border-radius: 12px;
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9); /* Dark shadow for depth */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5); /* Neon gradient text */
+    -webkit-background-clip: text;
+    color: transparent; /* Transparent to show gradient */
 }
 
 .form-section, .preview-section {
@@ -33,7 +42,9 @@ h1 {
 label {
     display: block;
     margin: 10px 0 5px;
-    text-align: left;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #cfd8dc; /* Light grey for better contrast */
 }
 
 input[type="text"], input[type="color"], input[type="range"] {
@@ -45,10 +56,33 @@ input[type="text"], input[type="color"], input[type="range"] {
     border: none;
     display: block;
     text-align: center;
+    background: #1c2b3a; /* Dark background for inputs */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5); /* Neon glow */
+}
+
+input[type="color"] {
+    max-width: 100px;
+    height: 50px;
+}
+
+.color-selection {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto 15px;
+}
+
+.color-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
 }
 
 .btn {
-    background-color: #29b6f6;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5); /* Neon gradient */
     border: none;
     padding: 10px 20px;
     color: #fff;
@@ -57,17 +91,19 @@ input[type="text"], input[type="color"], input[type="range"] {
     transition: all 0.3s ease;
     display: inline-block;
     margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Neon glow for buttons */
 }
 
 .btn:hover {
-    background-color: #0288d1;
+    background: linear-gradient(90deg, #7873f5, #ff6ec4); /* Swap neon gradient on hover */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
 #qrCanvas {
     margin: 20px auto;
-    background-color: white;
+    background-color: #141E30; /* Dark canvas background */
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3); /* Neon glow */
     display: block;
     width: 100%;
     max-width: 300px;
