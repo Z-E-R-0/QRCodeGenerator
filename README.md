@@ -1,48 +1,54 @@
-# Hello website!
+# Advanced QR Code Generator
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+A sleek, modern, and interactive web-based QR Code Generator with a dark tone UI, neon effects, and smooth animations. This project allows users to generate QR codes with customizable colors and sizes and download them for use.
 
-_Last updated: 28 Feb 2023_
+## Features
 
-## What's in this project?
+- **Dark Tone UI**: Futuristic dark-themed design with neon glow effects.
+- **Custom QR Colors**: Easily customize the color of the QR code.
+- **Custom Background Colors**: Choose a custom background color for the QR code.
+- **QR Code Size Adjustment**: Flexible size adjustment using a slider.
+- **Neon Animations**: Smooth hover effects, button animations, and glowing UI components.
+- **Downloadable QR Code**: Download the generated QR code as an image file.
+- **Responsive Design**: Works across multiple devices and screen sizes.
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+## Demo
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+[Link to demo or hosted version if available]
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
+## Technologies Used
 
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add using the code in the TODO.
+- **HTML5**: Markup language to structure the content.
+- **CSS3**: Custom styles with dark theme, gradients, and neon effects.
+- **JavaScript**: Handles QR code generation and dynamic UI interactions.
+- **Qrious.js**: Library used for generating QR codes on the canvas.
 
-Open each file and check out the comments (in gray) for more info.
+## Installation
 
-## Try this next 🏗️
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/yourusername/advanced-qr-code-generator.git
+    ```
 
-Take a look in `TODO.md` for next steps you can try out in your new site!
+2. Open the project folder:
+    ```bash
+    cd advanced-qr-code-generator
+    ```
 
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
+3. Open the `index.html` file in your web browser to view the QR Code Generator.
 
-## Ready to share your site?
+## Usage
 
-Add these meta tags for SEO and social sharing between your page `<head></head>` tags, changing the values for your site:
+1. Enter the text you want to encode in the QR code.
+2. Customize the QR code color and background color using the color pickers.
+3. Adjust the size of the QR code using the slider.
+4. Click the "Generate QR Code" button to preview the QR code.
+5. Click the "Download QR Code" button to save the generated QR code as an image.
 
-```
-<link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-<meta name="description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="Hello World!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-<meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta property="og:image" content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"/>
-<meta name="twitter:card" content="summary" />
-```
+## Project Structure
 
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
-
-## You built this with Glitch!
-
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
-
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+```bash
+├── index.html        # The main HTML file
+├── style.css         # The main CSS file for styling
+├── script.js         # JavaScript file for generating QR codes
+├── README.md         # This file
