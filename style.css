@@ -2,9 +2,12 @@
     box-sizing: border-box;
 }
 
+/* Moving gradient background */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #141E30, #243B55);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
     color: #fff;
     text-align: center;
     padding: 50px;
@@ -18,13 +21,14 @@ body {
 
 .container {
     background: rgba(255, 255, 255, 0.05); /* Semi-transparent dark background */
-    padding: 20px;
+    padding: 10px;
     border-radius: 12px;
-    max-width: 600px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9); /* Dark shadow for depth */
     backdrop-filter: blur(10px); /* Frosted glass effect */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
 h1 {
@@ -32,7 +36,8 @@ h1 {
     margin-bottom: 20px;
     background: linear-gradient(90deg, #ff6ec4, #7873f5); /* Neon gradient text */
     -webkit-background-clip: text;
-    color: transparent; /* Transparent to show gradient */
+    color: transparent;
+    animation: neonText 2s infinite alternate; /* Neon pulsing effect */
 }
 
 .form-section, .preview-section {
@@ -42,7 +47,7 @@ h1 {
 label {
     display: block;
     margin: 10px 0 5px;
-    text-align: center;
+    text-align:center;
     font-size: 1.2rem;
     color: #cfd8dc; /* Light grey for better contrast */
 }
@@ -59,6 +64,12 @@ input[type="text"], input[type="color"], input[type="range"] {
     background: #1c2b3a; /* Dark background for inputs */
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5); /* Neon glow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+input[type="text"]:hover, input[type="color"]:hover, input[type="range"]:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.7); /* Stronger glow on hover */
 }
 
 input[type="color"] {
@@ -92,11 +103,13 @@ input[type="color"] {
     display: inline-block;
     margin-top: 10px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Neon glow for buttons */
+    animation: pulse 2s infinite; /* Pulsing button animation */
 }
 
 .btn:hover {
     background: linear-gradient(90deg, #7873f5, #ff6ec4); /* Swap neon gradient on hover */
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px); /* Button lift on hover */
 }
 
 #qrCanvas {
@@ -107,6 +120,7 @@ input[type="color"] {
     display: block;
     width: 100%;
     max-width: 300px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect for QR code */
 }
 
 #qrSize {
@@ -114,4 +128,47 @@ input[type="color"] {
     max-width: 300px;
     margin: 0 auto;
     display: block;
+}
+/* Keyframe for the gradient animation */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+}
+
+@keyframes neonText {
+    from {
+        text-shadow: 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #7873f5, 0 0 40px #7873f5;
+    }
+    to {
+        text-shadow: 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 40px #7873f5, 0 0 50px #7873f5;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
